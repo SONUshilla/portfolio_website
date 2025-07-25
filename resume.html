@@ -28,7 +28,7 @@
       transform: translate3d(0, -10%, 0);
   visibility: hidden;
   pointer-events: none;
-  animation: curtainIn 0.7s ease-in 0.7s forwards;
+  animation: curtainIn 0.5s ease-in 0.7s forwards;
   will-change: transform, opacity;
 }
 
@@ -440,7 +440,7 @@ const observer = new IntersectionObserver((entries) => {
       }
     });
   }, {
-    threshold: 0.7 // Trigger when 10% of element is visible
+    threshold: 0.4 // Trigger when 10% of element is visible
   });
 document.querySelectorAll('.skills-section').forEach(box => {
     observer.observe(box);

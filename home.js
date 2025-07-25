@@ -48,9 +48,16 @@ function observeAndAnimate(selector, className, threshold = 1) {
       }, 1500); // Delay to wait for DOM to fully paint
     }
   });
-  
+
   const submitButton = document.getElementById("submit");
   submitButton.addEventListener("click", function() {
-    showToast();
+    Toastify({
+      text: "Message sent successfully!",
+      duration: 3000,
+      close: true,
+      gravity: "top", // top or bottom
+      position: "right", // left, center or right
+      backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+    }).showToast();
   })
     // Send the form data to the server (you can use AJAX or a form 
