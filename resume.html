@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sonu Shilla</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+    :root {
+      --background: #000000;
+      --primary: #ffd700;
+      --secondary: #4b5563;
+      --accent: #00ffd0;
+      --light: #e0e0e0;
+      --muted: #939496;
+      --danger: #ff4d4f;
+      --success: #22c55e;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .inside-body {
+      transform: translate3d(0, -10%, 0);
+  visibility: hidden;
+  pointer-events: none;
+  animation: curtainIn 0.7s ease-in 0.7s forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes curtainIn {
+  0% {
+    transform: translate3d(0, 10%, 0);
+    visibility: hidden;
+    pointer-events: none;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+    .middle-line {
+      animation: show 2s ease 1s forwards;
+      opacity: 0;
+    }
+    @keyframes show
+    {
+      from{
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+      }
+    }
+
+    .animate-curtain-in {
+      animation: curtainIn 0.5s forwards ease;
+    }
+    .edu-card{
+      background-color: #1A1A1A;
+    }
+
+    @keyframes curtain-down {
+      from {
+        clip-path: inset(0 0 100% 0);
+      }
+
+      to {
+        clip-path: inset(0 0 0 0);
+      }
+    }
+  </style>
+</head>
+
+<body class="text-[var(--light)] px-4 md:px-15 p-5 ">
+
+  <div id="loader"
+    class="fixed top-0 left-0 w-screen h-screen flex justify-center items-center z-50 bg-[var(--background)] animate-curtain">
+    <div class="bar fixed top-0 left-0 w-screen h-full flex justify-center items-center z-50 bg-[var(--background)]">
+      <svg class="w-20 h-20 rotate-[-90deg] ">
+        <circle cx="40" cy="40" r="35" stroke="var(--primary)" stroke-width="6" fill="none" class="progress-ring" />
+      </svg>
+    </div>
+
+  </div>
+
+<div class=" text-[var(--light)]">
+  <div class=" flex items-end flex-col fixed top-10 right-10 z-10">
+
+    <div id="menuBtn"
+      class="m h-10 w-10 bg-[var(--primary)] rounded-full flex items-center justify-center cursor-pointer">
+      <div class="menu transition-all duration-300 ease-in-out z-5">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+      </div>
+    </div>
+    <div class="menu-items absolute top-10   text-[var(--light)] mt-4 z-5 ">
+      <a id ="home-button" href="./index.html" class="nav-link fade-in delay-1">Home</a>
+      <a id ="projects-button" href="./projects.html" class="nav-link fade-in delay-3">Projects</a>
+      <a id ="resume-button" href="./resume.html" class="nav-link fade-in delay-3">Resume</a>
+      <a href="index.html#Contact-Me" class="nav-link fade-in delay-4">Contact</a>
+    </div>
+  </div>
+  <div class="sticky top-0 left-0 h-20 w-full z-1 bg-black">
+    <span class="sticky top-10 left-10 z-50 bg-[var(--background)]  px-4 py-2 text-2xl text-[var(--light)] border-b-2 border-[var(--primary)]">
+      Resume
+    </span>
+   </div>
+  <div class="cross inside-body relative ">
+  
+    <div class="resume-div mt-10 w-full">
+      <!-- Title -->
+      <div class="flex justify-center mt-8">
+        <div class="rounded-full px-6 py-2 bg-[var(--secondary)] text-lg sm:text-xl font-semibold shadow-md">
+          🎓 Education
+        </div>
+      </div>
+
+      <!-- Cards + Vertical Line -->
+      <div class="relative mt-10 w-full">
+        <!-- Vertical Line -->
+        <div
+          class=" middle-line hidden md:block absolute left-1/2 transform -translate-x-1/2 top-[-38px] h-[100vh] w-1 bg-[var(--primary)] z-0">
+        </div>
+
+        <!-- Grid -->
+        <div
+          class="flex flex-col items-center w-full md:grid md:grid-cols-2 gap-5 md:gap-12 mt-8 relative">
+
+          <!-- Card 1 (Left) -->
+          <div class=" relative md:col-start-1 md:row-start-1 row-span-1 flex md:justify-end ">
+            <!-- Arrow + Dot -->
+            <div class="hidden md:block absolute top-4 right-[-8px] w-5 h-5 rotate-45 bg-white/10 backdrop-blur-sm">
+            </div>
+            <div class="hidden md:block absolute top-4 right-[-34px] w-5 h-5 rounded-full bg-[var(--primary)] z-0">
+            </div>
+            <!-- Card -->
+            <div class="edu-card max-w-lg bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full text-left">
+              <p class="text-[var(--accent)] text-base sm:text-lg mb-1">2018-2019</p>
+              <h1 class="text-xl sm:text-2xl font-semibold mb-2">Secondary Education</h1>
+              <p class="text-base sm:text-lg leading-relaxed">
+                I completed my secondary education at <strong>Jawahar Navodaya Vidyalaya, Pabra</strong>.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 (Right) -->
+          <div class="relative md:col-start-2 md:row-start-1 row-span-2 flex md:justify-start md:mt-10">
+            <div class="hidden md:block absolute top-4 left-[-8px] w-5 h-5 rotate-45 bg-white/10 backdrop-blur-sm">
+            </div>
+            <div class="hidden md:block absolute top-4 left-[-34px] w-5 h-5 rounded-full bg-[var(--primary)] z-0"></div>
+            <div class="edu-card  max-w-lg bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full text-left">
+              <p class="text-[var(--accent)] text-base sm:text-lg mb-1">2020-2021</p>
+              <h1 class="text-xl sm:text-2xl font-semibold mb-2">Senior Secondary Education</h1>
+              <p class="text-base sm:text-lg leading-relaxed">
+                I pursued my senior secondary education with a focus on science and mathematics from <strong>Jawahar Navodaya Vidyalaya, Pabra</strong>.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 (Left) -->
+          <div class=" relative md:col-start-1 md:row-start-2 row-span-2 flex md:justify-end md:mt-10">
+            <div class="hidden md:block absolute top-4 right-[-8px] w-5 h-5 rotate-45 bg-white/10 backdrop-blur-sm">
+            </div>
+            <div class="hidden md:block absolute top-4 right-[-34px] w-5 h-5 rounded-full bg-[var(--primary)] z-0">
+            </div>
+            <div class="edu-card max-w-lg bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full text-left">
+              <p class="text-[var(--accent)] text-base sm:text-lg mb-1">2021-2025</p>
+              <h1 class="text-xl sm:text-2xl font-semibold mb-2">Graduation</h1>
+              <p class="text-base sm:text-lg leading-relaxed">
+                I completed my graduation in <strong>B.Tech in Computer Science and Engineering</strong> from 
+                <strong>Guru Jambheshwar University</strong>.
+              </p>
+              
+            </div>
+          </div>
+
+          <!-- Card 4 (Right) -->
+          <div class="relative md:col-start-2 md:row-start-3 row-span-3 flex md:justify-start md:mt-10">
+            <div class="hidden md:block absolute top-4 left-[-8px] w-5 h-5 rotate-45 bg-white/10 backdrop-blur-sm">
+            </div>
+            <div class="hidden md:block absolute top-4 left-[-34px] w-5 h-5 rounded-full bg-[var(--primary)] z-0"></div>
+            <div class="edu-card  max-w-lg bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full text-left">
+              <p class="text-[var(--accent)] text-base sm:text-lg mb-1">2024</p>
+              <h1 class="text-xl sm:text-2xl font-semibold mb-2">Internship</h1>
+              <p class="text-base sm:text-lg leading-relaxed">
+                I completed a 3-month remote internship at <strong>ADM Education & Welfare Society</strong> in 2024, where I gained hands-on experience and enhanced my skills in a professional environment.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+   <!-- Skills Section -->
+<div class="skills-section flex flex-col gap-12 mt-12">
+
+  <div class="flex items-center gap-4">
+    <!-- Vertical "Skills" text -->
+    <div class="text-3xl font-bold text-[var(--secondary)] transform -rotate-90 whitespace-nowrap">
+      skills
+    </div>
+  
+    <!-- Skill Bars Container -->
+    <div class="flex flex-col gap-4 w-full max-w-3/5">
+  
+      <!-- HTML -->
+      <div class="w-full">
+        <div class="flex justify-between mb-0.5 text-sm">
+          <span class="text-white">HTML</span>
+          <span class="skill-text text-white" data-skill-text="html">0%</span>
+        </div>
+        <div class="w-full h-1 bg-gray-700 rounded-full overflow-hidden">
+          <div class="skill-bar bg-[var(--primary)] h-full w-0 transition-all duration-1000 rounded-full" data-skill="html"></div>
+        </div>
+      </div>
+  
+      <!-- CSS -->
+      <div class="w-full">
+        <div class="flex justify-between mb-0.5 text-sm">
+          <span class="text-white">CSS</span>
+          <span class="skill-text text-white" data-skill-text="css">0%</span>
+        </div>
+        <div class="w-full h-1 bg-gray-700 rounded-full overflow-hidden">
+          <div class="skill-bar bg-[var(--primary)] h-full w-0 transition-all duration-1000 rounded-full" data-skill="css"></div>
+        </div>
+      </div>
+  
+      <!-- JavaScript -->
+      <div class="w-full">
+        <div class="flex justify-between mb-0.5 text-sm">
+          <span class="text-white">JavaScript</span>
+          <span class="skill-text text-white" data-skill-text="js">0%</span>
+        </div>
+        <div class="w-full h-1 bg-gray-700 rounded-full overflow-hidden">
+          <div class="skill-bar bg-[var(--primary)] h-full w-0 transition-all duration-1000 rounded-full" data-skill="js"></div>
+        </div>
+      </div>
+  
+      <!-- Python -->
+      <div class="w-full">
+        <div class="flex justify-between mb-0.5 text-sm">
+          <span class="text-white">Python</span>
+          <span class="skill-text text-white" data-skill-text="python">0%</span>
+        </div>
+        <div class="w-full h-1 bg-gray-700 rounded-full overflow-hidden">
+          <div class="skill-bar bg-[var(--primary)] h-full w-0 transition-all duration-1000 rounded-full" data-skill="python"></div>
+        </div>
+      </div>
+  
+      <!-- C++ -->
+      <div class="w-full">
+        <div class="flex justify-between mb-0.5 text-sm">
+          <span class="text-white">C++</span>
+          <span class="skill-text text-white" data-skill-text="cpp">0%</span>
+        </div>
+        <div class="w-full h-1 bg-gray-700 rounded-full overflow-hidden">
+          <div class="skill-bar bg-[var(--primary)] h-full w-0 transition-all duration-1000 rounded-full" data-skill="cpp"></div>
+        </div>
+      </div>
+  
+      <!-- Java -->
+      <div class="w-full">
+        <div class="flex justify-between mb-0.5 text-sm">
+          <span class="text-white">Java</span>
+          <span class="skill-text text-white" data-skill-text="java">0%</span>
+        </div>
+        <div class="w-full h-1 bg-gray-700 rounded-full overflow-hidden">
+          <div class="skill-bar bg-[var(--primary)] h-full w-0 transition-all duration-1000 rounded-full" data-skill="java"></div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  
+  
+
+  <!-- Tools & Frameworks -->
+  <div class="flex items-center gap-6">
+    <div class="text-3xl font-bold text-[var(--secondary)] transform -rotate-90 whitespace-nowrap">
+      Tools
+    </div>
+    <div class="flex flex-wrap justify-start gap-6">
+      <!-- React -->
+      <div class="skill-item text-center">
+        <div class="relative h-20 w-20 md:h-30 md:w-30">
+          <svg class="w-full h-full rotate-[-90deg]" viewBox="0 0 80 80">
+            <circle cx="40" cy="40" r="35" stroke="#374151" stroke-width="3" fill="none" />
+            <circle cx="40" cy="40" r="35" stroke="var(--primary)" stroke-width="3" fill="none" class="skill-bar" data-skill="react" />
+          </svg>
+          <div class="skill-text absolute inset-0 flex items-center justify-center font-semibold" data-skill-text="react">0%</div>
+        </div>
+        <p class="mt-2">React</p>
+      </div>
+
+      <!-- SQL -->
+      <div class="skill-item text-center">
+        <div class="relative h-20 w-20 md:h-30 md:w-30">
+          <svg class="w-full h-full rotate-[-90deg]" viewBox="0 0 80 80">
+            <circle cx="40" cy="40" r="35" stroke="#374151" stroke-width="3" fill="none" />
+            <circle cx="40" cy="40" r="35" stroke="var(--primary)" stroke-width="3" fill="none" class="skill-bar" data-skill="sql" />
+          </svg>
+          <div class="skill-text absolute inset-0 flex items-center justify-center text-white font-semibold" data-skill-text="sql">0%</div>
+        </div>
+        <p class="mt-2">SQL</p>
+      </div>
+
+      <!-- Express -->
+      <div class="skill-item text-center">
+        <div class="relative h-20 w-20 md:h-30 md:w-30">
+          <svg class="w-full h-full rotate-[-90deg]" viewBox="0 0 80 80">
+            <circle cx="40" cy="40" r="35" stroke="#374151" stroke-width="3" fill="none" />
+            <circle cx="40" cy="40" r="35" stroke="var(--primary)" stroke-width="3" fill="none" class="skill-bar" data-skill="express" />
+          </svg>
+          <div class="skill-text absolute inset-0 flex items-center justify-center text-white font-semibold" data-skill-text="express">0%</div>
+        </div>
+        <p class="mt-2">Express</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+    
+  </div>
+</div>
+</body>
+<script src="./script.js"></script>
+<script>
+const skills = {
+  html: 85,
+  css: 75,
+  js: 90,
+  python: 80,
+  cpp: 90,
+  java:70
+};
+
+animateSkillBars();
+
+function animateSkillBars() {
+  Object.keys(skills).forEach(skill => {
+    const percent = skills[skill];
+
+    const bar = document.querySelector(`.skill-bar[data-skill="${skill}"]`);
+    const barText = document.querySelector(`.skill-text[data-skill-text="${skill}"]`);
+
+    let currentPercent = 0;
+
+    const interval = setInterval(() => {
+      if (currentPercent > percent) {
+        clearInterval(interval);
+        return;
+      }
+
+      if (bar) bar.style.width = `${currentPercent}%`;
+      if (barText) barText.innerHTML = `${currentPercent}%`;
+
+      currentPercent++;
+    }, 20);
+  });
+}
+
+function animateSkill(skillName, percent) {
+  const skillBar = document.querySelector(`.skill-bar[data-skill="${skillName}"]`);
+  const skillText = document.querySelector(`[data-skill-text="${skillName}"]`);
+
+  if (!skillBar || !skillText) return;
+
+  const radius = 35;
+  const circumference = 2 * Math.PI * radius;
+
+  skillBar.style.strokeDasharray = circumference;
+  let currentPercent = 0;
+
+  const interval = setInterval(() => {
+    if (currentPercent > percent) {
+      clearInterval(interval);
+      return;
+    }
+
+    const offset = circumference - (currentPercent / 100) * circumference;
+    skillBar.style.strokeDashoffset = offset;
+    skillText.textContent = `${currentPercent}%`;
+    currentPercent++;
+  }, 20);
+}
+
+
+animateSkill("react", 72);
+animateSkill("sql", 64);
+animateSkill("express", 58);
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // Optionally unobserve after showing
+        console.log('Element is visible!');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.7 // Trigger when 10% of element is visible
+  });
+document.querySelectorAll('.skill-section').forEach(box => {
+    observer.observe(box);
+  });
+
+</script>
+</html>

@@ -1,0 +1,368 @@
+:root {
+  --background: #000000;
+  /* Deep navy black */
+  --primary: #ffd700;
+  /* Gold - for highlights */
+  --secondary: #4b5563;
+  /* Muted slate */
+  --accent: #00ffd0;
+  /* Neon teal - sparingly */
+  --light: #e0e0e0;
+  /* Light text color */
+  --muted: #939496;
+  /* For subtle text */
+  --danger: #ff4d4f;
+  /* Premium danger color */
+  --success: #22c55e;
+  /* Positive success green */
+}
+
+
+
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-img {
+  border-radius: 10% 40% 20% 10%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  width: 24px;
+  height: 24px;
+}
+
+.line {
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Optional widths */
+.line1 {
+  width: 16px;
+}
+
+.line2 {
+  width: 24px;
+}
+
+.line3 {
+  width: 20px;
+}
+
+/* Toggle class */
+.menu.open .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+  width: 24px;
+}
+
+.menu.open .line2 {
+  opacity: 0;
+}
+
+.menu.open .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+  width: 24px;
+}
+
+.cross {
+  transition: opacity 0.3s ease;
+  opacity: 100%;
+}
+
+.cross.all {
+  opacity: 50%;
+  /* Or add blur, darken, or menu slide-in */
+}
+
+.menu-items {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.menu-items.toggle {
+  display: flex;
+
+}
+@keyframes curtain-up-smooth {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  
+
+  
+.left-half {
+  animation: curtain-up 0.3s ease-out 1.4s forwards;
+  clip-path: inset(100% 0 0 0);
+  /* Initially hidden from bottom */
+}
+
+@keyframes curtain-up {
+  0% {
+    clip-path: inset(100% 0 0 0);
+    opacity: 0;
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+.right-hello {
+  animation: slideInFromBottom 0.3s ease-out 1.7s forwards;
+  opacity: 0;
+}
+
+.right-main {
+  animation: slideInFromBottom 0.3s ease-out 1.8s forwards;
+  opacity: 0;
+}
+
+.right-info {
+  animation: curtain-right 0.3s ease-out 2s forwards;
+  clip-path: inset(0 100% 0 0);
+  /* Initially hidden from bottom */
+  opacity: 0;
+}
+
+@keyframes curtain-right {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: slideInFromRight 0.2s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.m {
+  animation: fadeIn 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.what-i-do1 {
+  opacity: 0;
+  animation: slideInBottom 0.3s ease-out 0.5s forwards;
+}
+
+@keyframes slideInBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+#loader {
+  display: none;
+  animation: curtain-up-sm 0.4s ease-in-out 0.8s forwards;
+}
+@keyframes curtain-up-sm {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  .progress-ring {
+
+    stroke-dasharray: 220;
+    stroke-dashoffset: 220;
+    animation: fill-ring 0.2s ease-out forwards;
+  }
+  @keyframes fill-ring {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }  
+
+  .bar{
+    animation: smooth 0.4s ease-in-out 0.3s forwards;
+  }
+  @keyframes smooth {
+    from {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    to{
+      opacity: 50;
+      transform: translateY(-10%);
+    }
+  }
+
+  .page-transition {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: black;
+    background-image: radial-gradient(rgb(20, 14, 14) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0;
+    pointer-events: none;
+    animation: curtainUp 0.5s ease-in 1s forwards;
+  }
+  
+  @keyframes curtainUp {
+    0%{
+      opacity: 1;
+    }
+ 30%{
+  transform: translateY(0%);
+  opacity: 50%;
+ }
+ 100%{
+  transform: translateY(-100%);
+  opacity: 0;
+ }
+  }
+  
+
+.my-projects{
+  animation: slideInFromBottom 1s ease-in-out 2s forwards;
+  opacity: 0;
+}
+
+.fade{
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  pointer-events: none;
+  animation: fade1 1s ease-in-out forwards;
+  background-color: #000000;
+}
+@keyframes fade1 {
+  from{
+    opacity: 0%;
+  }
+  to{
+    opacity: 100%;
+  }
+}
+
+.resume-div {
+  animation: slideInFromBottomDiv 0.7s ease-out  forwards;
+  transform: translateY(50%);
+}
+
+@keyframes slideInFromBottomDiv {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-curtain-exit {
+  animation: curtainExit 0.5s forwards ease;
+}
+
+@keyframes curtainExit {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+}

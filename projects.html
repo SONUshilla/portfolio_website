@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sonu Shilla</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles.css"/>
+    <style>
+    .My-projects{
+  transform: translateY(-10%);
+  visibility: hidden;
+  pointer-events: none;
+  animation: curtainIn 1s ease-in-out 1s forwards;
+}
+
+@keyframes curtainIn {
+  0% {
+    transform: translateY(-10%);
+    visibility: hidden;
+    pointer-events: none;
+  }
+  100% {
+    transform: translateY(0%);
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+    </style>
+</head>
+<body class="px-4  sm:px-20 relative bg-[var(--background)] p-5 ">
+  <div id="loader" class="fixed top-0 left-0 w-screen h-screen flex justify-center items-center z-50 bg-[var(--background)] animate-curtain">
+    <div class="bar fixed top-0 left-0 w-screen h-full flex justify-center items-center z-50 bg-[var(--background)]">
+      <svg class="w-20 h-20 rotate-[-90deg] ">
+        <circle
+          cx="40"
+          cy="40"
+          r="35"
+          stroke="var(--primary)"
+          stroke-width="6"
+          fill="none"
+          class="progress-ring"
+        />
+      </svg>
+    </div>
+    
+  </div> 
+  <div class=" flex items-end flex-col fixed top-10 right-10 z-10">
+
+    <div id="menuBtn"
+      class="m h-10 w-10 bg-[var(--primary)] rounded-full flex items-center justify-center cursor-pointer">
+      <div class="menu transition-all duration-300 ease-in-out z-5">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+      </div>
+    </div>
+    <div class="menu-items absolute top-10   text-[var(--light)] mt-4 z-5 ">
+      <a id ="home-button" href="./index.html" class="nav-link fade-in delay-1">Home</a>
+      <a id ="projects-button" href="./projects.html" class="nav-link fade-in delay-3">Projects</a>
+      <a id ="resume-button" href="./resume.html" class="nav-link fade-in delay-3">Resume</a>
+      <a href="index.html#Contact-Me" class="nav-link fade-in delay-4">Contact</a>
+    </div>
+  </div>
+  <div class="cross ">
+  <div id="MyProjects" class="My-projects mt-10  w-full">
+    <!-- Header -->
+    <span class=" text-2xl text-[var(--light)] border-b-2 border-[var(--primary)]">
+      My Projects
+    </span>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 ">
+      <!-- Fancy Card -->
+      <div
+        class="mx-auto card group relative flex flex-col justify-center gap-4 border border-white/10 rounded-3xl p-6 w-full max-w-md backdrop-blur-md bg-white/5 hover:bg-white/10 transition-all">
+
+        <!-- Project Title -->
+        <span class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-300">
+          Sudoku Solver
+        </span>
+
+        <!-- Tech Stack Tags -->
+        <div class="flex flex-wrap gap-2">
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            HTML
+          </p>
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            CSS
+          </p>
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            JavaScript
+          </p>
+        </div>
+
+        <!-- Description -->
+        <p class="flex-grow text-sm text-[var(--light)] leading-relaxed">
+          Developed a Sudoku Solver using HTML, CSS, and JavaScript. Users can input numbers manually and generate a
+          completed Sudoku board instantly with a clean UI and smooth transitions.
+        </p>
+
+        <!-- View Button -->
+        <button onclick="window.open('https://sudoku-hqp6.onrender.com/', '_blank')"
+          class="flex items-center justify-center gap-2 mt-3 px-6 py-2 rounded-lg border border-[var(--primary)] text-[var(--primary)] font-medium hover:bg-[var(--primary)] hover:text-black transition duration-300 ease-in-out">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3.98 12s2.768-5.25 8.02-5.25S20.02 12 20.02 12s-2.768 5.25-8.02 5.25S3.98 12 3.98 12z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Live Preview
+        </button>
+      </div>
+
+      <div
+        class="mx-auto card group relative flex flex-col justify-center gap-4 border border-white/10 rounded-3xl  w-full max-w-md  transition-all backdrop-blur-md bg-white/5 p-6 hover:bg-white/10">
+        <!-- Project Image -->
+
+
+        <!-- Project Title -->
+        <span
+          class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-300">
+          Fake news detection
+        </span>
+
+        <!-- Tech Stack Tags -->
+        <div class="flex flex-wrap gap-2">
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            React
+          </p>
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            CSS
+          </p>
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            Matchine learning
+          </p>
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            Python
+          </p>
+        </div>
+
+        <!-- Description -->
+        <p class="flex-grow text-sm text-[var(--light)]  leading-relaxed">
+          Created a fake news detection system using Python and machine learning. The project takes news text as input
+          and predicts whether it is real or fake using a trained classification model. </p>
+        <!-- View Button -->
+        <button onclick="window.open('https://fake-news-detection-frontend.onrender.com/', '_blank')"
+          class="flex justify-center gap-1 mt-2 px-6 py-2 rounded-lg border border-[var(--primary)] text-[var(--primary)] font-medium hover:bg-[var(--primary)] hover:text-black transition duration-300 ease-in-out">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3.98 12s2.768-5.25 8.02-5.25S20.02 12 20.02 12s-2.768 5.25-8.02 5.25S3.98 12 3.98 12z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Live Preview
+        </button>
+      </div>
+      <div
+        class="hover:bg-white/10 mx-auto card group relative flex flex-col justify-center gap-4 border border-white/10 rounded-3xl backdrop-blur-md bg-white/5 p-6 w-full max-w-md  transition-all ">
+        <!-- Project Image -->
+
+
+        <!-- Project Title -->
+        <span
+          class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-300">
+          Dairy Management System
+        </span>
+
+        <!-- Tech Stack Tags -->
+        <div class="flex flex-wrap gap-2">
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            React
+          </p>
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            CSS
+          </p>
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            JavaScript
+          </p>
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            Postgres Sql
+          </p>
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            Node.js
+          </p>
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            express
+          </p>
+        </div>
+
+        <!-- Description -->
+        <p class="flex-grow text-sm text-[var(--light)]  leading-relaxed">
+          Built a dairy management system using the MERN stack. The project allows users to record milk entries,
+          manage feed and ghee transactions, track payments, and monitor stock. It includes a user-friendly interface
+          for both admins and dairy users.
+        </p>
+        <!-- View Button -->
+        <button onclick="window.open('https://newdairyfrontend.onrender.com/', '_blank')"
+          class="flex justify-center gap-1 mt-2 px-6 py-2 rounded-lg border border-[var(--primary)] text-[var(--primary)] font-medium hover:bg-[var(--primary)] hover:text-black transition duration-300 ease-in-out">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3.98 12s2.768-5.25 8.02-5.25S20.02 12 20.02 12s-2.768 5.25-8.02 5.25S3.98 12 3.98 12z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Live Preview
+        </button>
+      </div>
+      <div
+        class="hover:bg-white/10 mx-auto card group relative flex flex-col justify-center gap-4 border border-white/10 rounded-3xl p-4 w-full max-w-md  transition-all backdrop-blur-md bg-white/5 p-6 ">
+        <!-- Project Image -->
+
+
+        <!-- Project Title -->
+        <span
+          class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-300">
+          Hodlinfo page
+        </span>
+
+        <!-- Tech Stack Tags -->
+        <div class="flex flex-wrap gap-2">
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            React
+          </p>
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            CSS
+          </p>
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            Node.js
+          </p>
+        </div>
+
+        <!-- Description -->
+        <p class="flex-grow text-sm text-[var(--light)]  leading-relaxed">
+          Created a clone of the HodlInfo main page using React.js, CSS, and JavaScript. The project displays
+          real-time cryptocurrency prices from multiple exchanges, includes a responsive layout, and features sorting
+          and filtering options for coins. Built this project to strengthen frontend skills and showcase it for
+          internship applications
+        </p>
+        <!-- View Button -->
+        <button onclick="window.open('https://hodlinfo-v5az.onrender.com/', '_blank')"
+          class="flex justify-center gap-1 mt-2 px-6 py-2 rounded-lg border border-[var(--primary)] text-[var(--primary)] font-medium hover:bg-[var(--primary)] hover:text-black transition duration-300 ease-in-out">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3.98 12s2.768-5.25 8.02-5.25S20.02 12 20.02 12s-2.768 5.25-8.02 5.25S3.98 12 3.98 12z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Live Preview
+        </button>
+      </div>
+      <div
+        class=" hover:bg-white/10 mx-auto card group relative flex flex-col justify-center gap-4 border border-white/10 rounded-3xl backdrop-blur-md bg-white/5 p-6 w-full max-w-md  transition-all ">
+        <!-- Project Image -->
+
+
+        <!-- Project Title -->
+        <span
+          class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-300">
+          Ecommerse website
+        </span>
+
+        <!-- Tech Stack Tags -->
+        <div class="flex flex-wrap gap-2">
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            React
+          </p>
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            CSS
+          </p>
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            JavaScript
+          </p>
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            Node.js
+          </p>
+        </div>
+
+        <!-- Description -->
+        <p class="flex-grow text-sm text-[var(--light)]  leading-relaxed">
+          Built a fully responsive eCommerce website using REACT, CSS, and JavaScript. The project includes product
+          listings, a shopping cart, and a checkout flow. It was designed with a clean UI and focused on improving
+          frontend development skills during internship preparation.
+        </p>
+        <!-- View Button -->
+        <button onclick="window.open('https://cartfrontend-8o9e.onrender.com/', '_blank')"
+          class="flex justify-center gap-1 mt-2 px-6 py-2 rounded-lg border border-[var(--primary)] text-[var(--primary)] font-medium hover:bg-[var(--primary)] hover:text-black transition duration-300 ease-in-out">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3.98 12s2.768-5.25 8.02-5.25S20.02 12 20.02 12s-2.768 5.25-8.02 5.25S3.98 12 3.98 12z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Live Preview
+        </button>
+      </div>
+      <div
+        class="hover:bg-white/10 mx-auto card group relative flex flex-col justify-center gap-4 border border-white/10 rounded-3xl backdrop-blur-md bg-white/5 p-6 w-full max-w-md  transition-all ">
+        <!-- Project Image -->
+
+
+        <!-- Project Title -->
+        <span
+          class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-300">
+          Random Video Chat Website
+        </span>
+
+        <!-- Tech Stack Tags -->
+        <div class="flex flex-wrap gap-2">
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            HTML
+          </p>
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            CSS
+          </p>
+          <p class="px-3 py-1 bg-[var(--secondary)] text-[var(--light)] text-sm rounded-full shadow-md">
+            JavaScript
+          </p>
+        </div>
+
+        <!-- Description -->
+        <p class="flex-grow text-sm text-[var(--light)]  leading-relaxed">
+          Developed a random video chatting web application that connects two users anonymously for real-time video
+          conversations. Implemented using WebRTC for peer-to-peer communication along with REACT ,HTML, CSS, and
+          JavaScript for the frontend. The app includes features like room creation and secure media streaming.
+        </p>
+        <!-- View Button -->
+        <button onclick="window.open('https://chatapp-laab.onrender.com/', '_blank')"
+          class="flex justify-center gap-1 mt-2 px-6 py-2 rounded-lg border border-[var(--primary)] text-[var(--primary)] font-medium hover:bg-[var(--primary)] hover:text-black transition duration-300 ease-in-out">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3.98 12s2.768-5.25 8.02-5.25S20.02 12 20.02 12s-2.768 5.25-8.02 5.25S3.98 12 3.98 12z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Live Preview
+        </button>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+<script src="./script.js"></script>
+</html>
