@@ -127,19 +127,19 @@
       <div class="relative mt-10 w-full">
         <!-- Vertical Line -->
         <div
-          class=" middle-line hidden md:block absolute left-1/2 transform -translate-x-1/2 top-[-38px] h-[100vh] w-1 bg-[var(--primary)] z-0">
+          class=" middle-line hidden md:block absolute left-1/2 transform -translate-x-1/2 top-[-38px] h-[520px] lg:h-[470] w-[1px] bg-[var(--primary)] z-0">
         </div>
 
         <!-- Grid -->
         <div
-          class="flex flex-col items-center w-full md:grid md:grid-cols-2 gap-5 md:gap-12 mt-8 relative">
+          class="flex flex-col items-center w-full md:grid md:grid-cols-2  gap-5 md:gap-12 mt-8 relative">
 
           <!-- Card 1 (Left) -->
           <div class=" relative md:col-start-1 md:row-start-1 row-span-1 flex md:justify-end ">
             <!-- Arrow + Dot -->
             <div class="hidden md:block absolute top-4 right-[-8px] w-5 h-5 rotate-45 bg-white/10 backdrop-blur-sm">
             </div>
-            <div class="hidden md:block absolute top-4 right-[-34px] w-5 h-5 rounded-full bg-[var(--primary)] z-0">
+            <div class="hidden md:block absolute top-[22px] right-[-28px] w-2 h-2 rounded-full bg-[var(--primary)] z-0">
             </div>
             <!-- Card -->
             <div class="edu-card max-w-lg bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full text-left">
@@ -155,7 +155,7 @@
           <div class="relative md:col-start-2 md:row-start-1 row-span-2 flex md:justify-start md:mt-10">
             <div class="hidden md:block absolute top-4 left-[-8px] w-5 h-5 rotate-45 bg-white/10 backdrop-blur-sm">
             </div>
-            <div class="hidden md:block absolute top-4 left-[-34px] w-5 h-5 rounded-full bg-[var(--primary)] z-0"></div>
+            <div class="hidden md:block absolute top-[22px] left-[-28px] w-2 h-2 rounded-full bg-[var(--primary)] z-0"></div>
             <div class="edu-card  max-w-lg bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full text-left">
               <p class="text-[var(--accent)] text-base sm:text-lg mb-1">2020-2021</p>
               <h1 class="text-xl sm:text-2xl font-semibold mb-2">Senior Secondary Education</h1>
@@ -169,7 +169,7 @@
           <div class=" relative md:col-start-1 md:row-start-2 row-span-2 flex md:justify-end md:mt-10">
             <div class="hidden md:block absolute top-4 right-[-8px] w-5 h-5 rotate-45 bg-white/10 backdrop-blur-sm">
             </div>
-            <div class="hidden md:block absolute top-4 right-[-34px] w-5 h-5 rounded-full bg-[var(--primary)] z-0">
+            <div class="hidden md:block absolute top-[22px] right-[-28px] w-2 h-2 rounded-full bg-[var(--primary)] z-0">
             </div>
             <div class="edu-card max-w-lg bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full text-left">
               <p class="text-[var(--accent)] text-base sm:text-lg mb-1">2021-2025</p>
@@ -186,7 +186,7 @@
           <div class="relative md:col-start-2 md:row-start-3 row-span-3 flex md:justify-start md:mt-10">
             <div class="hidden md:block absolute top-4 left-[-8px] w-5 h-5 rotate-45 bg-white/10 backdrop-blur-sm">
             </div>
-            <div class="hidden md:block absolute top-4 left-[-34px] w-5 h-5 rounded-full bg-[var(--primary)] z-0"></div>
+            <div class="hidden md:block absolute top-[22px] left-[-28px] w-2 h-2 rounded-full bg-[var(--primary)] z-0"></div>
             <div class="edu-card  max-w-lg bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full text-left">
               <p class="text-[var(--accent)] text-base sm:text-lg mb-1">2024</p>
               <h1 class="text-xl sm:text-2xl font-semibold mb-2">Internship</h1>
@@ -324,6 +324,16 @@
         </div>
         <p class="mt-2">Express</p>
       </div>
+      <div class="skill-item text-center">
+        <div class="relative h-20 w-20 md:h-30 md:w-30">
+          <svg class="w-full h-full rotate-[-90deg]" viewBox="0 0 80 80">
+            <circle cx="40" cy="40" r="35" stroke="#374151" stroke-width="3" fill="none" />
+            <circle cx="40" cy="40" r="35" stroke="var(--primary)" stroke-width="3" fill="none" class="skill-bar" data-skill="postman" />
+          </svg>
+          <div class="skill-text absolute inset-0 flex items-center justify-center text-white font-semibold" data-skill-text="postman">0%</div>
+        </div>
+        <p class="mt-2">Postman</p>
+      </div>
     </div>
   </div>
 </div>
@@ -333,6 +343,25 @@
     
   </div>
 </div>
+<footer class="text-center text-gray-400 border-t border-gray-700 py-6 mt-10">
+  <p class="mb-4">© 2025 Sonu Shilla. All rights reserved.</p>
+  <div class="flex justify-center gap-6 text-xl">
+    <a href="https://github.com/SONUshilla" target="_blank" class="hover:text-white transition-colors duration-300">
+      <i class="animate-bounce delay-1 fab fa-github hover:animate-none "></i>
+    </a>
+    <a href="https://www.linkedin.com/in/sonu-shilla-8376b6270/" target="_blank"
+      class="hover:text-white transition-colors duration-300">
+      <i class="animate-bounce delay-2 fab fa-linkedin hover:animate-none"></i>
+    </a>
+    <a href="mailto:sonushilla189@gmail.com" class="hover:text-white transition-colors duration-300">
+      <i class="animate-bounce delay-3 fas fa-envelope hover:animate-none"></i>
+    </a>
+    <a href="https://twitter.com/sonu-shilla" target="_blank"
+      class="hover:text-white transition-colors duration-300">
+      <i class="animate-bounce delay-4 fab fa-twitter hover:animate-none"></i>
+    </a>
+  </div>
+</footer>
 </body>
 <script src="./script.js"></script>
 <script>
@@ -345,7 +374,7 @@ const skills = {
   java:70
 };
 
-animateSkillBars();
+
 
 function animateSkillBars() {
   Object.keys(skills).forEach(skill => {
@@ -366,7 +395,7 @@ function animateSkillBars() {
       if (barText) barText.innerHTML = `${currentPercent}%`;
 
       currentPercent++;
-    }, 20);
+    }, 10);
   });
 }
 
@@ -392,26 +421,28 @@ function animateSkill(skillName, percent) {
     skillBar.style.strokeDashoffset = offset;
     skillText.textContent = `${currentPercent}%`;
     currentPercent++;
-  }, 20);
+  }, 10);
 }
 
 
-animateSkill("react", 72);
-animateSkill("sql", 64);
-animateSkill("express", 58);
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
         // Optionally unobserve after showing
-        console.log('Element is visible!');
+        animateSkillBars();
+        animateSkill("react", 82);
+        animateSkill("sql", 90);
+        animateSkill("express", 78);
+        animateSkill("postman", 68);
         observer.unobserve(entry.target);
       }
     });
   }, {
     threshold: 0.7 // Trigger when 10% of element is visible
   });
-document.querySelectorAll('.skill-section').forEach(box => {
+document.querySelectorAll('.skills-section').forEach(box => {
     observer.observe(box);
   });
 

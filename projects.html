@@ -13,25 +13,38 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles.css"/>
     <style>
-    .My-projects{
-  transform: translateY(-10%);
+.My-projects {
+transform: translate3d(0, -10%, 0);
   visibility: hidden;
   pointer-events: none;
-  animation: curtainIn 1s ease-in-out 1s forwards;
+  animation: curtain 0.7s ease-in 0.7s forwards;
+  will-change: transform, opacity;
 }
 
-@keyframes curtainIn {
+@keyframes curtain {
   0% {
-    transform: translateY(-10%);
+    transform: translate3d(0, 10%, 0);
     visibility: hidden;
     pointer-events: none;
   }
   100% {
-    transform: translateY(0%);
+    transform: translate3d(0, 0, 0);
     visibility: visible;
     pointer-events: auto;
   }
 }
+.card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.curtain-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+
     </style>
 </head>
 <body class="px-4  sm:px-20 relative bg-[var(--background)] p-5 ">
@@ -69,16 +82,18 @@
     </div>
   </div>
   <div class="cross ">
-  <div id="MyProjects" class="My-projects mt-10  w-full">
-    <!-- Header -->
-    <span class=" text-2xl text-[var(--light)] border-b-2 border-[var(--primary)]">
-      My Projects
-    </span>
+    <div id="MyProjects" class="relative w-full">
+      <!-- Fixed Header -->
+     <div class="sticky top-0 left-0 h-20 w-full z-1 bg-black">
+      <span class="sticky top-10 left-10 z-50 bg-[var(--background)]  px-4 py-2 text-2xl text-[var(--light)] border-b-2 border-[var(--primary)]">
+        My Projects
+      </span>
+     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 ">
+    <div class="My-projects grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 ">
       <!-- Fancy Card -->
       <div
-        class="mx-auto card group relative flex flex-col justify-center gap-4 border border-white/10 rounded-3xl p-6 w-full max-w-md backdrop-blur-md bg-white/5 hover:bg-white/10 transition-all">
+        class="mx-auto group relative flex flex-col justify-center gap-4 border border-white/10 rounded-3xl p-6 w-full max-w-md backdrop-blur-md bg-white/5 hover:bg-white/10 transition-all">
 
         <!-- Project Title -->
         <span class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-300">
@@ -118,7 +133,7 @@
       </div>
 
       <div
-        class="mx-auto card group relative flex flex-col justify-center gap-4 border border-white/10 rounded-3xl  w-full max-w-md  transition-all backdrop-blur-md bg-white/5 p-6 hover:bg-white/10">
+        class="mx-auto group relative flex flex-col justify-center gap-4 border border-white/10 rounded-3xl  w-full max-w-md  transition-all backdrop-blur-md bg-white/5 p-6 hover:bg-white/10">
         <!-- Project Image -->
 
 
@@ -344,6 +359,37 @@
     </div>
   </div>
   </div>
+  <footer class="text-center text-gray-400 border-t border-gray-700 py-6 mt-10">
+    <p class="mb-4">© 2025 Sonu Shilla. All rights reserved.</p>
+    <div class="flex justify-center gap-6 text-xl">
+      <a href="https://github.com/SONUshilla" target="_blank" class="hover:text-white transition-colors duration-300">
+        <i class="animate-bounce delay-1 fab fa-github hover:animate-none "></i>
+      </a>
+      <a href="https://www.linkedin.com/in/sonu-shilla-8376b6270/" target="_blank"
+        class="hover:text-white transition-colors duration-300">
+        <i class="animate-bounce delay-2 fab fa-linkedin hover:animate-none"></i>
+      </a>
+      <a href="mailto:sonushilla189@gmail.com" class="hover:text-white transition-colors duration-300">
+        <i class="animate-bounce delay-3 fas fa-envelope hover:animate-none"></i>
+      </a>
+      <a href="https://twitter.com/sonu-shilla" target="_blank"
+        class="hover:text-white transition-colors duration-300">
+        <i class="animate-bounce delay-4 fab fa-twitter hover:animate-none"></i>
+      </a>
+    </div>
+  </footer>
 </body>
 <script src="./script.js"></script>
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("curtain-in");
+    }
+  });
+});
+
+document.querySelectorAll(".card").forEach((el) => observer.observe(el));
+
+</script>
 </html>

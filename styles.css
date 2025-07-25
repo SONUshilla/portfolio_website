@@ -85,7 +85,7 @@ html {
 }
 
 .cross.all {
-  opacity: 50%;
+  opacity: 10%;
   /* Or add blur, darken, or menu slide-in */
 }
 
@@ -95,7 +95,15 @@ html {
   align-items: flex-end;
   cursor: pointer;
 }
-
+.nav-link{
+  font-size: large;
+}
+.nav-link:hover{
+  color: var(--accent);
+}
+.active-link {
+  color: var(--primary);
+}
 .menu-items.toggle {
   display: flex;
 
@@ -292,10 +300,6 @@ html {
     left: 0;
     height: 100vh;
     width: 100%;
-    background: black;
-    background-image: radial-gradient(rgb(20, 14, 14) 1px, transparent 1px);
-    background-size: 20px 20px;
-    background-position: 0 0;
     pointer-events: none;
     animation: curtainUp 0.5s ease-in 1s forwards;
   }
@@ -339,11 +343,6 @@ html {
   to{
     opacity: 100%;
   }
-}
-
-.resume-div {
-  animation: slideInFromBottomDiv 0.7s ease-out  forwards;
-  transform: translateY(50%);
 }
 
 @keyframes slideInFromBottomDiv {

@@ -24,13 +24,12 @@
   
 const links = document.querySelectorAll(".nav-link");
 window.addEventListener("DOMContentLoaded", () => {
-  const currentPath = window.location.href;
-  console.log(currentPath);
+  const currentHash = window.location.href;
+
   links.forEach(link => {
-    const linkPath = new URL(link.href);
-    console.log( "linked path is",linkPath);
-   
-    if (linkPath === currentPath) {
+    const linkHash = new URL(link.href).href;
+
+    if (linkHash === currentHash) {
       link.classList.add("active-link");
     } else {
       link.classList.remove("active-link");
