@@ -49,3 +49,8 @@ function observeAndAnimate(selector, className, threshold = 1) {
     }
   });
   
+  const submitButton = document.getElementById("submit");
+  submitButton.addEventListener("click", function() {
+    showToast();
+  })
+    // Send the form data to the server (you can use AJAX or a form 

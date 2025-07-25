@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sonu Shilla</title>
-
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -165,15 +166,16 @@
     </div>
 
 
-    <div id="Contact-Me" class="contact-section  text-[var(--light)]  mt-20  ">
+    <div id="Contact-Me" class="contact-section text-[var(--light)] mt-20">
       <div class="flex flex-row items-center w-full">
         <p class="border-1 flex-grow border-[var(--secondary)]"></p>
-        <span class=" m-4 text-2xl   text-center lg:text-left">Contact Me</span>
+        <span class="m-4 text-2xl text-center lg:text-left">Contact Me</span>
         <p class="flex-grow border-1 border-[var(--secondary)]"></p>
       </div>
-
+    
       <div class="flex flex-col lg:flex-row items-center gap-10 mt-10">
-
+    
+        <!-- LEFT INFO PANEL -->
         <div class="hidden lg:flex lg:w-1/2 flex-col justify-center items-start space-y-4 px-6">
           <h1 class="text-3xl font-bold text-[var(--primary)]">Let's Connect</h1>
           <p class="text-[var(--secondary)] text-lg leading-relaxed">
@@ -189,49 +191,48 @@
             <li>🌌 Passionate about creativity and clean code</li>
           </ul>
         </div>
-
-
-        <!-- Contact form -->
-        <div
-        class="flex flex-col gap-4 w-full lg:w-1/2 rounded-3xl px-6 md:mx-auto py-10 border border-white/10 backdrop-blur-md bg-black/50 shadow-lg text-white">
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    
+        <!-- CONTACT FORM -->
+        <form id="contact-form" action="https://formsubmit.co/sonushilla189@gmail.com" method="POST"
+          class="flex flex-col gap-4 w-full lg:w-1/2 rounded-3xl px-6 md:mx-auto py-10 border border-white/10 backdrop-blur-md bg-black/50 shadow-lg text-white">
+    
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="FirstName" class="text-sm font-medium text-gray-300">First Name</label>
+              <input type="text" name="first_name" id="FirstName" placeholder="Name" required
+                class="bg-transparent border border-white/20 text-white p-3 rounded-xl w-full placeholder-gray-500" />
+            </div>
+            <div>
+              <label for="LastName" class="text-sm font-medium text-gray-300">Last Name</label>
+              <input type="text" name="last_name" id="LastName" placeholder="Name" required
+                class="bg-transparent border border-white/20 text-white p-3 rounded-xl w-full placeholder-gray-500" />
+            </div>
+          </div>
+    
           <div>
-            <label for="FirstName" class="text-sm font-medium text-gray-300">First Name</label>
-            <input type="text" id="FirstName" placeholder="Name"
+            <label for="email" class="text-sm font-medium text-gray-300">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" required
               class="bg-transparent border border-white/20 text-white p-3 rounded-xl w-full placeholder-gray-500" />
           </div>
+    
           <div>
-            <label for="LastName" class="text-sm font-medium text-gray-300">Last Name</label>
-            <input type="text" id="LastName" placeholder="Name"
+            <label for="Mobile_Number" class="text-sm font-medium text-gray-300">Mobile Number</label>
+            <input type="tel" name="phone" id="Mobile_Number" placeholder="Mobile"
               class="bg-transparent border border-white/20 text-white p-3 rounded-xl w-full placeholder-gray-500" />
           </div>
-        </div>
-      
-        <div>
-          <label for="email" class="text-sm font-medium text-gray-300">Email</label>
-          <input type="email" id="email" placeholder="Email"
-            class="bg-transparent border border-white/20 text-white p-3 rounded-xl w-full placeholder-gray-500" />
-        </div>
-      
-        <div>
-          <label for="Mobile_Number" class="text-sm font-medium text-gray-300">Mobile Number</label>
-          <input type="tel" id="Mobile_Number" placeholder="Mobile"
-            class="bg-transparent border border-white/20 text-white p-3 rounded-xl w-full placeholder-gray-500" />
-        </div>
-      
-        <div>
-          <label for="Message" class="text-sm font-medium text-gray-300">Message</label>
-          <textarea id="Message" rows="4" placeholder="Write your message"
-            class="bg-transparent border border-white/20 text-white p-3 rounded-xl w-full placeholder-gray-500 resize-none"></textarea>
-        </div>
-      
-        <button
-          class="mt-4 border border-white/20 text-yellow-300 px-6 py-3 rounded-xl hover:bg-yellow-300 hover:text-black transition">
-          Submit
-        </button>
-      </div>
-      
+    
+          <div>
+            <label for="Message" class="text-sm font-medium text-gray-300">Message</label>
+            <textarea name="message" id="Message" rows="4" placeholder="Write your message" required
+              class="bg-transparent border border-white/20 text-white p-3 rounded-xl w-full placeholder-gray-500 resize-none"></textarea>
+          </div>
+    
+          <button type="submit" id="submit"
+            class="mt-4 border border-white/20 text-yellow-300 px-6 py-3 rounded-xl hover:bg-yellow-300 hover:text-black transition">
+            Submit
+          </button>
+        </form>
+    
       </div>
     </div>
     <footer class="text-center text-gray-400 border-t border-gray-700 py-6 mt-10">
@@ -259,5 +260,15 @@
 
 <script src="./script.js"></script>
 <script src="./home.js"></script>
+<script>
+  Toastify({
+    text: "Message sent successfully!",
+    duration: 3000,
+    close: true,
+    gravity: "top", // top or bottom
+    position: "right", // left, center or right
+    backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+  });
+</script>
 
 </html>
